@@ -1,10 +1,25 @@
 pipeline { 
     agent any  
     stages { 
-        stage('Build') { 
+        stage('Clone') { 
             steps { 
-               echo 'This is a minimal pipeline.' 
+               echo 'Cloning from repositories' 
             }
         }
+         stage('Build') { 
+            steps { 
+               echo 'Build the maven project' 
+            }
+        }
+        stage('Testing') { 
+            steps { 
+               echo 'Testing the project' 
+            }
+        }
+        stage('Deploy') { 
+            steps { 
+               echo 'Deploying the project' 
+            }
+        } 
     }
 }
