@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        any
+        maven
     }
     stages {
         stage ('Cloning the repository') {
