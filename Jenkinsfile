@@ -8,7 +8,8 @@ pipeline {
         }
          stage('Build') { 
             steps { 
-               echo 'Build the maven project' 
+               echo 'Build the maven project'
+               sh 'mvn clean install'
             }
         }
         stage('Testing') { 
