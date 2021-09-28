@@ -9,27 +9,28 @@ pipeline {
                 sh '''
                     echo "Cloning the rpo"
                 '''
-            }
-	stage ('Maven Build') {	
-	    steps {
+				}
+		}
+		stage ('Maven Build') {	
+			steps {
                 sh '''
                     echo "Maven Build"
                 '''
-            }
-	}
-	stage ('Maven Test') {	
-	steps {
+				}
+		}			
+		stage ('Maven Test') {	
+			steps {
                 sh '''
                     echo "Maven test"
                 '''
-            }
-	}
-	stage ('Deploy') {	
-	steps {
+				}
+		}
+		stage ('Deploy') {	
+				steps {
                 sh '''
                     echo "Deploy"
                 '''
-            }
+				}
         }
 }
 }
