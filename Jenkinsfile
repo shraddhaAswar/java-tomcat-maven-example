@@ -1,37 +1,10 @@
-pipeline {
-    agent any
-    tools {
-        maven
-    }
-    stages {
-        stage ('Cloning the repository') {
-            steps {
-                sh '''
-                    echo "Cloning the rpo"
-                '''
-				}
-		}
-		stage ('Maven Build') {	
-			steps {
-                sh '''
-                    echo "Maven Build"
-                '''
-				}
-		}			
-		stage ('Maven Test') {	
-			steps {
-                sh '''
-                    echo "Maven test"
-                '''
-				}
-		}
-		stage ('Deploy') {	
-				steps {
-                sh '''
-                    echo "Deploy"
-                '''
-				}
+pipeline { 
+    agent any  
+    stages { 
+        stage('Build') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
+            }
         }
+    }
 }
-}
-
